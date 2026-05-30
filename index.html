@@ -34,7 +34,14 @@
         }
         .info h1 { font-size: 1.8rem; margin-bottom: 0.2rem; }
         .info .subtitle { font-size: 1rem; color: var(--meta); margin-bottom: 0.5rem; }
-        .info .links { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; }
+        .info .links { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; align-items: center; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-btn { cursor: pointer; background: none; border: none; font-size: 0.9rem; color: var(--accent); }
+        .dropdown-btn::after { content: " ▾"; font-size: 0.7rem; }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid var(--border); border-radius: 4px; min-width: 220px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 10; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 0.3rem 0.8rem; font-size: 0.85rem; }
+        .dropdown-menu a:hover { background: var(--light); text-decoration: none; }
 
         /* ── Sections ── */
         section { margin-bottom: 1.5rem; }
@@ -83,8 +90,14 @@
                 School of Mathematical Sciences, Universiti Sains Malaysia
             </div>
             <div class="links">
-                <a href="mailto:conrrile@outlook.com">📧 conrrile@outlook.com</a>
-                <a href="mailto:dummydanny@gmail.com">📧 dummydanny@gmail.com</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">📧 shikangli@usm.my</button>
+                    <div class="dropdown-menu">
+                        <a href="mailto:shikangli@usm.my">shikangli@usm.my</a>
+                        <a href="mailto:conrrile@outlook.com">conrrile@outlook.com</a>
+                        <a href="mailto:dummydanny@gmail.com">dummydanny@gmail.com</a>
+                    </div>
+                </div>
                 <a href="https://github.com/Conrrile">💻 GitHub</a>
                 <a href="https://scholar.google.com/citations?user=YOURID">📚 Google Scholar</a>
             </div>
