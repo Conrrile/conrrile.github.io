@@ -3,97 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kangli Shi - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shi Kangli — Academic Homepage</title>
+    <style>
+        :root {
+            --accent: #004f90;
+            --light: #f8f9fa;
+            --text: #333;
+            --meta: #666;
+            --border: #e0e0e0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: #fff;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* ── Header ── */
+        header {
+            margin-bottom: 1.5rem;
+        }
+        .info h1 { font-size: 1.8rem; margin-bottom: 0.2rem; }
+        .info .subtitle { font-size: 1rem; color: var(--meta); margin-bottom: 0.5rem; }
+        .info .links { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.9rem; }
+
+        /* ── Sections ── */
+        section { margin-bottom: 1.5rem; }
+        h2 {
+            font-size: 1.15rem;
+            color: var(--accent);
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 0.25rem;
+            margin-bottom: 0.6rem;
+        }
+        p { margin-bottom: 0.5rem; }
+
+        /* ── Publications ── */
+        .pub { margin-bottom: 0.8rem; }
+        .pub .title { font-weight: 600; }
+        .pub .authors { font-size: 0.95rem; }
+        .pub .venue { font-size: 0.85rem; color: var(--meta); font-style: italic; }
+        .pub .links { font-size: 0.85rem; margin-top: 0.15rem; }
+        .pub .links a {
+            background: var(--light);
+            padding: 0.1rem 0.5rem;
+            border-radius: 3px;
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+        }
+        .pub .links a:hover { background: var(--border); text-decoration: none; }
+
+        /* ── News ── */
+        .news-item { margin-bottom: 0.4rem; font-size: 0.95rem; }
+        .news-item .date { font-weight: 600; color: var(--accent); margin-right: 0.5rem; }
+
+        /* ── Footer ── */
+        footer { text-align: center; color: var(--meta); font-size: 0.8rem; margin-top: 2rem; }
+    </style>
 </head>
 <body>
+
+<div class="container">
+
+    <!-- ====== Header ====== -->
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <a href="index.html">Kangli Shi</a>
-                </div>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="info">
+            <h1>Shi Kangli</h1>
+            <div class="subtitle">
+                M.Sc. Student in Statistics (by Research)<br>
+                School of Mathematical Sciences, Universiti Sains Malaysia
+            </div>
+            <div class="links">
+                <a href="mailto:shikangli@usm.my">📧 Email</a>
+                <a href="https://github.com/yourgithub">💻 GitHub</a>
+                <a href="https://scholar.google.com/citations?user=YOURID">📚 Google Scholar</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Hello, I'm Kangli Shi</h1>
-                    <p>A machine learning novice with a passion for exploring data.</p>
-                    <a href="#contact" class="btn">Get in Touch</a>
-                </div>
-            </div>
-        </section>
+    <!-- ====== About ====== -->
+    <section>
+        <h2>About</h2>
+        <p>
+            I am a research master's student at the School of Mathematical Sciences, Universiti Sains Malaysia,
+            advised by Assoc. Prof. Dr. Mohd Tahir Ismail. My research focuses on self-supervised representation
+            learning for time series, with an emphasis on spectral methods, contrastive learning, and
+            physics-inspired dynamics modeling. I am also interested in model-based reinforcement learning.
+        </p>
+        <p>
+            Previously, I earned my B.Sc. in Finance from Shanghai University of International Business and
+            Economics (SUIBE), where my undergraduate thesis explored gold volatility prediction using
+            bidirectional LSTM under the COVID-19 pandemic.
+        </p>
+    </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>I am currently focusing on the fields of Machine Learning and Deep Learning, with a special interest in Time-Series Forecasting and Natural Language Processing. I am passionate about leveraging technology to solve real-world problems.</p>
-                        <p>I enjoy turning complex ideas into simple, efficient solutions. While I might describe myself as being "good at dreaming," this is the very source of my innovation—daring to imagine what's possible and then working to bring those dreams to life with code.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="https://placehold.co/400x400/EEE/31343C?text=Your+Photo" alt="A headshot of Kangli Shi">
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- ====== Research Interests ====== -->
+    <section>
+        <h2>Research Interests</h2>
+        <ul style="margin-left: 1.2rem;">
+            <li><strong>Time Series Representation Learning:</strong> Self-supervised contrastive learning (CoST, TS2Vec, SoftCLT, TimesURL, SimMTM, PatchTST). Dynamic modeling, spectral mining, spectral distillation.</li>
+            <li><strong>Model-Based Reinforcement Learning:</strong> SAC, PPO, DrQ, Deep Bisimulation for Control, Dreamer, World Models.</li>
+        </ul>
+    </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="project-grid">
-                    <div class="project-item">
-                        <h3>EASY FORECASTER</h3>
-                        <p>A project designed to simplify time-series forecasting in the financial sector. It's based on an enhanced Transformer architecture to improve prediction accuracy and efficiency.</p>
-                        <a href="https://github.com/Conrrile/Enhanced-Time-Forecast-Transformer-In-Finanace" target="_blank" rel="noopener noreferrer" class="project-link">
-                            View Project on GitHub
-                        </a>
-                    </div>
-                    <div class="project-item">
-                        <h3>My Next Great Project</h3>
-                        <p>This project is currently in the planning and development phase. Stay tuned for more details!</p>
-                        <a href="#" class="project-link disabled">
-                            Coming Soon
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- ====== News ====== -->
+    <section>
+        <h2>News</h2>
+        <div class="news-item"><span class="date">[2026-05]</span> One paper accepted at <strong>ECML PKDD 2026</strong>.</div>
+        <div class="news-item"><span class="date">[2025-10]</span> Started M.Sc. at Universiti Sains Malaysia.</div>
+    </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <p>If you are interested in my work or have any opportunities for collaboration, please feel free to get in touch with me at any time.</p>
-                <div class="contact-info">
-                    <p>Email: <a href="mailto:dummydanny278@gmail.com">dummydanny278@gmail.com</a></p>
-                </div>
-                <div class="social-links">
-                    <h3>Find me on social media</h3>
-                    <ul>
-                        <li><a href="https://github.com/Conrrile" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a></li>
-                        <li><a href="https://x.com/extremelyexp" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    </ul>
-                </div>
+    <!-- ====== Publications ====== -->
+    <section>
+        <h2>Publications</h2>
+
+        <div class="pub">
+            <div class="title">K-VIC: Koopman Dynamics and Variance-Covariance Regularization for Time Series Representation</div>
+            <div class="authors"><strong>Shi Kangli</strong>, Mohd Tahir Ismail</div>
+            <div class="venue">ECML PKDD 2026</div>
+            <div class="links">
+                <a href="#">paper</a>
+                <a href="#">code</a>
+                <a href="#">bibtex</a>
             </div>
-        </section>
-    </main>
+        </div>
+
+    </section>
+
+    <!-- ====== Education ====== -->
+    <section>
+        <h2>Education</h2>
+        <div style="margin-bottom: 0.6rem;">
+            <strong>M.Sc. in Statistics (by Research)</strong>, 2025 – Present<br>
+            <span style="color: var(--meta);">Universiti Sains Malaysia, Penang, Malaysia</span><br>
+            <span style="font-size: 0.9rem;">Advisor: Assoc. Prof. Dr. Mohd Tahir Ismail</span>
+        </div>
+        <div>
+            <strong>B.Sc. in Finance</strong>, 2019 – 2023<br>
+            <span style="color: var(--meta);">Shanghai University of International Business and Economics, Shanghai, China</span><br>
+            <span style="font-size: 0.9rem;">GPA: 3.1/4.0 | Thesis: Gold Volatility Prediction Under the COVID-19 Pandemic</span>
+        </div>
+    </section>
+
+    <!-- ====== Skills ====== -->
+    <section>
+        <h2>Technical Skills</h2>
+        <p>
+            <strong>Programming:</strong> Python, PyTorch, R, SPSS, Stata, LaTeX, Git, Linux<br>
+            <strong>Languages:</strong> Chinese (Native), English (PTE 56 ≈ IELTS 6.0, CET-6 Passed)
+        </p>
+    </section>
+
+    <!-- ====== Collaborators ====== -->
+    <section>
+        <h2>Collaborators</h2>
+        <ul style="margin-left: 1.2rem;">
+            <li><strong>Assoc. Prof. Dr. Mohd Tahir Ismail</strong> — Universiti Sains Malaysia</li>
+            <li><strong>Prof. Geoffrey I. Webb</strong> — Monash University</li>
+            <li><strong>Dr. Teresa Weiqing Wang</strong> — Monash University</li>
+            <li><strong>Chenhao Liu</strong> — Monash University</li>
+        </ul>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Kangli Shi. All rights reserved.</p>
-        </div>
+        Last updated: May 2026 · Shi Kangli
     </footer>
+
+</div>
 </body>
 </html>
